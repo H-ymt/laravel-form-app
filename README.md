@@ -37,7 +37,7 @@
 git clone <repository-url>
 cd path/to/
 
-# 2. 環境ファイルの作成（必要に応じて）
+# 2. 環境ファイルの作成
 cp product/.env.example product/.env
 
 # 3. Dockerコンテナを起動
@@ -50,11 +50,14 @@ docker-compose exec app bash
 composer install
 npm install
 
-# 6. データベースのマイグレーション
+# 6. アプリケーションキーの生成
+php artisan key:generate
+
+# 7. データベースのマイグレーション
 php artisan migrate
 
-# 7. フロントエンド開発サーバーの起動
-# ※ なぜか`exit`でコンテナから抜けてから`npm run dev`を実行しないと正常に反映されませんので、一旦、こちらで対応をお願いします
+# 8. フロントエンド開発サーバーの起動
+# ※ なぜか`exit`でコンテナから抜けてから`npm run dev`を実行しないと正常に反映されませんので、一旦、こちら
 npm run dev
 ```
 
