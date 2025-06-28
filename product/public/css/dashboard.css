@@ -1,0 +1,212 @@
+/* Base */
+:root {
+    --bgc-btn-primary: #00111f;
+    --color-btn-primary: #fff;
+    --color-primary: #ff681c;
+    --color-border: #abaaa6;
+    --color-text-white: #fff;
+    --bgc-soft: #eceaea;
+    --color-text-base: #00111f;
+    --color-text-muted: #999999;
+    --bgc-base: #fff;
+    --container-width: 80rem;
+    --color-focus: #e9976d;
+}
+
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-base);
+    font-weight: 500;
+    background-color: var(--bgc-base);
+}
+
+.container-width {
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+@media (max-width: 73rem) {
+    .container-width {
+        padding-inline: 1.5rem;
+    }
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    /* ボタン間のスペース */
+    justify-content: flex-end;
+    /* 左寄せ */
+    align-items: center;
+    /* レスポンシブ用に左右余白 */
+}
+
+/* Button Components */
+.button {
+    cursor: pointer;
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 0.0625rem;
+}
+
+.redButton {
+    background-color: #ff4242!important;
+}
+
+/* Visual */
+.button--primary {
+    background-color: var(--bgc-btn-primary);
+    color: var(--color-btn-primary);
+    transition: background-color 0.2s;
+    border-radius: 0.25rem;
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+    background-color: color-mix(in srgb, var(--bgc-btn-primary) 80%, #999999);
+}
+
+/* Size */
+.button--md {
+    padding: 0.5rem 1rem 0.4rem;
+}
+
+/* Tab */
+.tab {
+    display: flex;
+    gap: 0.5rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabButton {
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+    padding-block: 0.25rem 0.625rem;
+    width: 100%;
+    max-width: 15.625rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border-bottom: 3px solid;
+}
+
+.tabButton:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 0.0625rem;
+}
+
+.tabWrapper:has(#unexported_formEntrys.is-active) .tabButton.unexported {
+    color: var(--color-text-base);
+}
+
+.tabWrapper:has(#exported_formEntrys.is-active) .tabButton.exported {
+    color: var(--color-text-base);
+}
+
+/* Table */
+.tableWrapper {
+    margin-top: 2rem;
+    display: block;
+    overflow-x: auto;
+}
+
+.table {
+    width: var(--container-width);
+}
+
+.table thead th {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    border: 1px solid var(--color-primary);
+    padding: 0.6rem 1.5rem 0.45rem;
+    text-wrap: nowrap;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 1rem 0.25rem;
+    background-color: var(--bgc-base);
+    border-bottom: 1px solid var(--color-border);
+    word-break: break-all;
+    font-size: 14px;
+}
+
+.table tbody td.additional_text {
+    text-align: start;
+}
+
+.table th.name {
+    width: 140px;
+}
+
+.table th.tel {
+    width: 150px;
+}
+
+.table th.mail {
+    width: 280px;
+}
+
+.table th.birth {
+    width: 120px;
+}
+
+.table th.entryDate {
+    width: 160px;
+}
+
+
+@media (max-width: 768px) {
+    .table thead th {
+        padding: 0.6rem 1rem 0.25rem;
+    }
+
+    .table tbody td {
+        padding: 0.75rem 0.25rem;
+    }
+}
+
+/* Export Button */
+.export {
+    display: flex;
+    padding-block: 4rem 2rem;
+    justify-content: flex-end;
+}
+
+/* Pages */
+.dashboard {
+    padding-bottom: 4rem;
+}
+
+.no-round {
+    border-radius: 0;
+}
+
+.loginHeader__column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginHeader__column a.block {
+    background: var(--bgc-btn-primary);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.loginHeader__column a.block:hover {
+    background-color: color-mix(in srgb, var(--bgc-btn-primary) 80%, #999999);
+    border-color: color-mix(in srgb, var(--bgc-btn-primary) 80%, #999999);
+}
+
+.text-danger.mt-3 {
+    text-align: center;
+}

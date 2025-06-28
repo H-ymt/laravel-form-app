@@ -1,0 +1,19 @@
+{
+    "overrides": [
+        {
+            "files": "*.blade.php",
+            "options": {
+                "parser": "html",
+                "printWidth": 120,
+                "tabWidth": 4,
+                "useTabs": false,
+                "singleQuote": false,
+                "quoteProps": "as-needed",
+                "trailingComma": "es5",
+                "bracketSpacing": true,
+                "bracketSameLine": false,
+                "arrowParens": "always"
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+:root {
+  /* Colors */
+  --colorBlack: #333;
+  --familyEn: "Open Sans", sans-serif;
+
+/* Families */
+  /* Use the most common English font and Japanese Font as the base */
+  --familyJp: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+
+/* Font Size clamp: https: //min-max-calculator.9elements.com/ */
+  --fontMax14Min12: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  --fontMax16Min14: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
+  --fontMax18Min16: clamp(1rem, 0.956rem + 0.19vw, 1.125rem);
+  --fontMax20Min16: clamp(1rem, 0.929rem + 0.36vw, 1.25rem);
+  --fontMax24Min18: clamp(1.125rem, 1.018rem + 0.54vw, 1.5rem);
+  --fontMax32Min24: clamp(1.5rem, 1.357rem + 0.71vw, 2rem);
+  --fontMax40Min28: clamp(1.75rem, 1.536rem + 1.07vw, 2.5rem);
+  --fontMax48Min36: clamp(2.25rem, 2.036rem + 1.07vw, 3rem);
+}
